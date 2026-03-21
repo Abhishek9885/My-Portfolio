@@ -245,7 +245,7 @@ const DEMO_URLS = {
   "ai-hygiene-system":    null,   // add URL when ready
   "cartiq-backend": "https://cartiq-backend.onrender.com/",
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
-  "My Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
+  "My-Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
 };
 
 export default function Portfolio() {
@@ -312,7 +312,7 @@ export default function Portfolio() {
             { name: "ai-hygiene-system",  description: "Full-stack app using Google Gemini AI for skin condition analysis and cleanliness detection.",      html_url: "https://github.com/Abhishek9885/ai-hygiene-system",  full_name: "Abhishek9885/ai-hygiene-system",   category: "Full Stack", demo: null },
             {name: "cartiq-backend",description: "Backend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-backend", full_name: "Abhishek9885/cartiq-backend", category: "Full Stack", demo: "https://cartiq-backend.onrender.com/"},
             {name: "cartiq-frontend",description: "Frontend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-frontend", full_name: "Abhishek9885/cartiq-frontend", category: "Full Stack", demo: "https://cartiq-frontend.vercel.app/"},
-            {name: "My Portfolio",description: "Modern animated portfolio", html_url: "https://my-portfolio-abhishek-85.vercel.app/", full_name: "Abhishek9885/portfolio", category: "Frontend", demo: "https://my-portfolio-abhishek-85.vercel.app/"},
+            {name: "My-Portfolio",description: "Modern animated portfolio", html_url: "https://github.com/Abhishek9885/My-Portfolio/", full_name: "Abhishek9885/My-Portfolio", category: "Frontend", demo: "https://my-portfolio-abhishek-85.vercel.app/"},
 
           ]);
           return;
