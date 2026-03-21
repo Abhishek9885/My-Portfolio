@@ -245,7 +245,7 @@ const DEMO_URLS = {
   "ai-hygiene-system":    null,   // add URL when ready
   "cartiq-backend": "https://cartiq-backend.onrender.com/",
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
-  "Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
+  "My Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
 };
 
 export default function Portfolio() {
@@ -319,7 +319,7 @@ export default function Portfolio() {
         }
    
         setProjects(
-          data.slice(0, 6).map(p => ({
+          data.slice(0, 8).map(p => ({
             ...p,
             category: "Full Stack",
             demo: DEMO_URLS[p.name] || null,
