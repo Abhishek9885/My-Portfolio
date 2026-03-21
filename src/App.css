@@ -184,12 +184,7 @@
 }
 
 
-/* ============================================================
-   SKILLS SECTION — background & atmosphere
-   (all styles below are new, nothing above was changed)
-   ============================================================ */
 
-/* --- animated grid lines overlay --- */
 #skills::before {
   content: '';
   position: absolute;
@@ -208,7 +203,7 @@
   100% { background-position: 52px 52px, 52px 52px; }
 }
 
-/* --- deep radial mesh gradients --- */
+
 #skills::after {
   content: '';
   position: absolute;
@@ -221,13 +216,13 @@
   z-index: 0;
 }
 
-/* make sure heading + pills sit above the pseudo layers */
+
 #skills > * {
   position: relative;
   z-index: 1;
 }
 
-/* --- soft vignette around edges --- */
+
 #skills .skills-vignette {
   position: absolute;
   inset: 0;
@@ -240,7 +235,7 @@
   z-index: 0;
 }
 
-/* --- floating orbs (decorative, animated) --- */
+
 #skills .skills-orb {
   position: absolute;
   border-radius: 50%;
@@ -285,14 +280,14 @@
   100% { transform: translateY(30px) scale(1.08); }
 }
 
-/* --- heading glow text shadow --- */
+
 #skills h2 {
   text-shadow:
     0 0 40px rgba(56, 189, 248, 0.35),
     0 0 80px rgba(56, 189, 248, 0.15);
 }
 
-/* --- subtle bottom border separator --- */
+
 #skills {
   border-bottom: 1px solid rgba(56, 189, 248, 0.08);
 }

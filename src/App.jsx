@@ -12,9 +12,7 @@ import certi5 from "./assets/certi5.jpg";
 import certi6 from "./assets/certi6.jpg";
 import certi7 from "./assets/certi7.jpg";
 
-/* ─────────────────────────────────────────────
-   SKILL CARD HELPERS
-───────────────────────────────────────────── */
+
 function useSparkles(canvasRef, glow, active) {
   const particles = useRef([]);
   const rafRef    = useRef(null);
@@ -135,9 +133,7 @@ function SkillCard({ s }) {
   );
 }
 
-/* ─────────────────────────────────────────────
-   CONTACT SECTION
-───────────────────────────────────────────── */
+
 function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus]     = useState("idle");
@@ -242,17 +238,14 @@ function ContactSection() {
   );
 }
 
-/* ─────────────────────────────────────────────
-   DEMO URL MAP  ← add your live URLs here
-   key = exact repo name from GitHub
-───────────────────────────────────────────── */
+
 const DEMO_URLS = {
   "Todo-App-MERN":        "https://todo-app-mern-liart.vercel.app/",
   "first-contributions":  null,   // no live demo
   "ai-hygiene-system":    null,   // add URL when ready
-  "Portfolio Website":    null,
   "cartiq-backend": "https://cartiq-backend.onrender.com/",
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
+  "Portfolio": "https://abhishek-portfolio-2024.vercel.app/",
 };
 
 export default function Portfolio() {
@@ -311,19 +304,20 @@ export default function Portfolio() {
       .then(res => res.json())
       .then(data => {
         if (!Array.isArray(data)) {
-          // fallback with correct demo URLs
+        
           setProjects([
             { name: "Portfolio Website",  description: "Modern animated portfolio",                                                                         html_url: "#",                                             full_name: "Abhishek9885/portfolio",              category: "Frontend",   demo: null },
             { name: "Todo-App-MERN",      description: "To Do app using MERN STACK",                                                                       html_url: "https://github.com/Abhishek9885/Todo-App-MERN", full_name: "Abhishek9885/Todo-App-MERN",          category: "Full Stack", demo: "https://todo-app-mern-liart.vercel.app/" },
             { name: "first-contributions",description: "I have made changes in first contribution",                                                        html_url: "https://github.com/Abhishek9885/first-contributions", full_name: "Abhishek9885/first-contributions", category: "Full Stack", demo: null },
             { name: "ai-hygiene-system",  description: "Full-stack app using Google Gemini AI for skin condition analysis and cleanliness detection.",      html_url: "https://github.com/Abhishek9885/ai-hygiene-system",  full_name: "Abhishek9885/ai-hygiene-system",   category: "Full Stack", demo: null },
             {name: "cartiq-backend",description: "Backend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-backend", full_name: "Abhishek9885/cartiq-backend", category: "Full Stack", demo: "https://cartiq-backend.onrender.com/"},
-            {name: "cartiq-frontend",description: "Frontend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-frontend", full_name: "Abhishek9885/cartiq-frontend", category: "Full Stack", demo: "https://cartiq-frontend.vercel.app/"}
+            {name: "cartiq-frontend",description: "Frontend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-frontend", full_name: "Abhishek9885/cartiq-frontend", category: "Full Stack", demo: "https://cartiq-frontend.vercel.app/"},
+            {name: "Portfolio",description: "Modern animated portfolio", html_url: "https://github.com/Abhishek9885/portfolio", full_name: "Abhishek9885/portfolio", category: "Frontend", demo: "https://abhishek-portfolio-2024.vercel.app/"},
 
           ]);
           return;
         }
-        // Attach demo URL from DEMO_URLS map by repo name
+   
         setProjects(
           data.slice(0, 6).map(p => ({
             ...p,
@@ -412,7 +406,7 @@ export default function Portfolio() {
       <div ref={cursorRef} className="fixed w-40 h-40 bg-cyan-400/20 blur-3xl rounded-full pointer-events-none -translate-x-1/2 -translate-y-1/2 z-50" />
       <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:40px_40px] opacity-20"></div>
 
-      {/* ── NAV ── */}
+    
       <nav className="flex justify-between items-center px-8 py-4 backdrop-blur-xl bg-black/30 sticky top-0 z-40">
         <h1 className="text-xl font-bold">Abhishek</h1>
         <div className="flex gap-6 text-sm">
@@ -425,7 +419,7 @@ export default function Portfolio() {
         <button onClick={() => setDark(!dark)}>🌙</button>
       </nav>
 
-      {/* ── HOME ── */}
+  
       <section id="home" className="h-screen flex flex-col md:flex-row items-center justify-between px-10 relative overflow-hidden">
         <div className="absolute left-20 top-40 w-80 h-80 bg-cyan-400/20 blur-3xl rounded-full"></div>
         <div className="absolute right-20 bottom-20 w-80 h-80 bg-purple-500/20 blur-3xl rounded-full"></div>
@@ -450,7 +444,7 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* ── ABOUT ── */}
+    
       <motion.section id="about"
         initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
         className="px-10 py-16 text-center max-w-3xl mx-auto">
@@ -471,7 +465,7 @@ export default function Portfolio() {
         </div>
       </motion.section>
 
-      {/* ── SKILLS ── */}
+    
       <section id="skills" className="px-10 py-20 text-center relative overflow-hidden">
         <div style={{ position:"absolute", borderRadius:"50%", filter:"blur(70px)", pointerEvents:"none", zIndex:0, width:280, height:280, top:-70, left:"5%", background:"rgba(56,189,248,0.07)", animation:"skillOrbFloat 11s ease-in-out infinite alternate" }} />
         <div style={{ position:"absolute", borderRadius:"50%", filter:"blur(70px)", pointerEvents:"none", zIndex:0, width:210, height:210, bottom:-50, right:"8%", background:"rgba(129,140,248,0.08)", animation:"skillOrbFloat 9s ease-in-out infinite alternate", animationDelay:"-4s" }} />
@@ -484,7 +478,6 @@ export default function Portfolio() {
         </motion.div>
       </section>
 
-      {/* ── PROJECTS ── */}
       <motion.section id="projects" initial={{ opacity: 0, y: 60 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="px-10 py-20">
         <h2 className="text-4xl text-center mb-10 font-bold">Projects</h2>
         <div className="flex justify-center gap-4 mb-10">
@@ -503,13 +496,13 @@ export default function Portfolio() {
                 <img src={`https://opengraph.githubassets.com/1/${p.full_name}`} className="w-full h-40 object-cover rounded-xl" />
                 <div className="absolute inset-0 bg-black/60 opacity-0 hover:opacity-100 transition flex gap-3 items-center justify-center">
 
-                  {/* Code button — always shown */}
+                 
                   <a href={p.html_url} target="_blank" rel="noopener noreferrer"
                     className="px-3 py-1 bg-cyan-400 text-black rounded font-medium">
                     Code
                   </a>
 
-                  {/* Live button — only shown when demo URL exists, grayed out otherwise */}
+              
                   {p.demo ? (
                     <a href={p.demo} target="_blank" rel="noopener noreferrer"
                       className="px-3 py-1 bg-white text-black rounded font-medium hover:bg-cyan-400 transition">
@@ -539,7 +532,7 @@ export default function Portfolio() {
         </div>
       </motion.section>
 
-      {/* ── CERTIFICATES ── */}
+    
       <section id="certificates" className="px-10 py-16 text-center">
         <h2 className="text-3xl mb-10">Certificates</h2>
         <div className="grid md:grid-cols-3 gap-8">
@@ -555,10 +548,10 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* ── CONTACT ── */}
+   
       <ContactSection />
 
-      {/* ── MODALS ── */}
+    
       {selectedCert && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50" onClick={() => setSelectedCert(null)}>
           <div className="max-w-3xl w-full p-4">
@@ -584,7 +577,7 @@ export default function Portfolio() {
         </div>
       )}
 
-      {/* ── FOOTER ── */}
+   
       <footer className="text-center py-8 text-gray-500 border-t border-white/5">
         <p className="mb-3">© 2026 Abhishek Singh — Built with  ❤️</p>
         <div className="flex justify-center gap-5">
