@@ -246,6 +246,7 @@ const DEMO_URLS = {
   "cartiq-backend": "https://cartiq-backend.onrender.com/",
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
   "My-Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
+  "Plan-AI": "https://plan-ai-tan.vercel.app/",
 };
 
 export default function Portfolio() {
@@ -313,6 +314,7 @@ export default function Portfolio() {
             {name: "cartiq-backend",description: "Backend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-backend", full_name: "Abhishek9885/cartiq-backend", category: "Full Stack", demo: "https://cartiq-backend.onrender.com/"},
             {name: "cartiq-frontend",description: "Frontend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-frontend", full_name: "Abhishek9885/cartiq-frontend", category: "Full Stack", demo: "https://cartiq-frontend.vercel.app/"},
             {name: "My-Portfolio",description: "Modern animated portfolio", html_url: "https://github.com/Abhishek9885/My-Portfolio/", full_name: "Abhishek9885/My-Portfolio", category: "Frontend", demo: "https://my-portfolio-abhishek-85.vercel.app/"},
+            {name: "Plan-AI",description: "AI-powered task management app that uses natural language processing to help users organize and prioritize their to-do lists effectively.", html_url: "https://github.com/Abhishek9885/Plan-AI", full_name: "Abhishek9885/Plan-AI", category: "Full Stack", demo: "https://plan-ai-tan.vercel.app/" },
 
           ]);
           return;
@@ -433,7 +435,7 @@ export default function Portfolio() {
           <div className="mt-6 flex gap-4">
             <a href="#projects" className="px-6 py-2 bg-cyan-400 text-black rounded-lg hover:scale-105 transition">View Projects</a>
             <a href="#about"    className="px-6 py-2 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition">About Me</a>
-            <a href="/resume.pdf" download="Abhishek_Singh_Resume.pdf"
+            <a href="/Abhishek_resume.pdf" download="Abhishek_Singh_Resume.pdf"
               className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-black rounded-lg hover:scale-105 transition shadow-lg hover:shadow-cyan-400/50">
               Download Resume
             </a>
