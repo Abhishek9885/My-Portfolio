@@ -247,6 +247,7 @@ const DEMO_URLS = {
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
   "My-Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
   "Plan-AI": "https://plan-ai-tan.vercel.app/",
+  "ResumeAI": "https://resumeai-sck8.onrender.com/",
 };
 
 export default function Portfolio() {
@@ -315,7 +316,7 @@ export default function Portfolio() {
             {name: "cartiq-frontend",description: "Frontend for CartIQ, an intelligent shopping assistant that provides personalized product recommendations and price comparisons.", html_url: "https://github.com/Abhishek9885/cartiq-frontend", full_name: "Abhishek9885/cartiq-frontend", category: "Full Stack", demo: "https://cartiq-frontend.vercel.app/"},
             {name: "My-Portfolio",description: "Modern animated portfolio", html_url: "https://github.com/Abhishek9885/My-Portfolio/", full_name: "Abhishek9885/My-Portfolio", category: "Frontend", demo: "https://my-portfolio-abhishek-85.vercel.app/"},
             {name: "Plan-AI",description: "AI-powered task management app that uses natural language processing to help users organize and prioritize their to-do lists effectively.", html_url: "https://github.com/Abhishek9885/Plan-AI", full_name: "Abhishek9885/Plan-AI", category: "Full Stack", demo: "https://plan-ai-tan.vercel.app/" },
-            {name: "ResumeAI Analyzer", description: "ResumeAI Analyzer is a full-stack web application that uses artificial intelligence to help users create and improve their resumes. It provides personalized feedback on resume content, formatting, and keywords to help users create professional and effective resumes.", html_url: "https://github.com/Abhishek9885/ResumeAI-Analyzer", full_name: "Abhishek9885/ResumeAI-Analyzer", category: "Full Stack", demo: "https://resumeai-sck8.onrender.com//"},
+            {name: "ResumeAI", description: "ResumeAI Analyzer is a full-stack web application that uses artificial intelligence to help users create and improve their resumes. It provides personalized feedback on resume content, formatting, and keywords to help users create professional and effective resumes.", html_url: "https://github.com/Abhishek9885/ResumeAI-Analyzer", full_name: "Abhishek9885/ResumeAI-Analyzer", category: "Full Stack", demo: "https://resumeai-sck8.onrender.com//"},
 
           ]);
           return;
