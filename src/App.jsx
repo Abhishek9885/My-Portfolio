@@ -437,7 +437,7 @@ export default function Portfolio() {
           <div className="mt-6 flex gap-4">
             <a href="#projects" className="px-6 py-2 bg-cyan-400 text-black rounded-lg hover:scale-105 transition">View Projects</a>
             <a href="#about"    className="px-6 py-2 border border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition">About Me</a>
-            <a href="/Abhishek_resume.pdf" download="Abhishek_Singh_Resume.pdf"
+            <a href="/Abhishek_Singh_Resume.pdf" download="Abhishek_Singh_Resume.pdf"
               className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-black rounded-lg hover:scale-105 transition shadow-lg hover:shadow-cyan-400/50">
               Download Resume
             </a>
