@@ -1,3 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Clash Display', sans-serif;
+  }
+}
+
+@property --sk-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes skillSpinBorder {
+  to {
+    --sk-angle: 360deg;
+  }
+}
+
+@keyframes skillPulseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.22;
+  }
+  70% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.75);
+    opacity: 0;
+  }
+}
+
+@keyframes skillOrbFloat {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(28px) scale(1.07);
+  }
+}
+
+@keyframes skillGridDrift {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 52px 52px, 52px 52px;
+  }
+}
+
+#skills::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(56, 189, 248, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
+  background-size: 52px 52px;
+  animation: skillGridDrift 18s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#skills::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 65% 55% at 20% 10%, rgba(56, 189, 248, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 50% at 80% 90%, rgba(129, 140, 248, 0.09) 0%, transparent 60%),
+    radial-gradient(ellipse 45% 40% at 55% 50%, rgba(0, 255, 157, 0.03) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #2d4a62;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #0a1628 inset !important;
+  -webkit-text-fill-color: #e0eaff !important;
+}
