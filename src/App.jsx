@@ -148,17 +148,18 @@ function ContactSection() {
     setStatus("sending");
 
     try {
-      const response = await fetch("https://formsubmit.co/ajax/singhabhishek4964@gmail.com", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
         body: JSON.stringify({
+          access_key: "99197062-b1e6-4784-b8a7-5a561028434a", // You will replace this!
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          _subject: `New Portfolio Message from ${formData.name}`
+          subject: `New Portfolio Message from ${formData.name}`
         })
       });
 
