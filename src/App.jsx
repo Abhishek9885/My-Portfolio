@@ -248,6 +248,7 @@ const DEMO_URLS = {
   "My-Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
   "Plan-AI": "https://plan-ai-tan.vercel.app/",
   "ResumeAI": "https://resumeai-sck8.onrender.com/",
+  "Digital-Wishlist-Platform": "https://digital-wishlist-platform.onrender.com/dashboard.html",
 };
 
 export default function Portfolio() {
@@ -317,13 +318,14 @@ export default function Portfolio() {
             {name: "My-Portfolio",description: "Modern animated portfolio", html_url: "https://github.com/Abhishek9885/My-Portfolio/", full_name: "Abhishek9885/My-Portfolio", category: "Frontend", demo: "https://my-portfolio-abhishek-85.vercel.app/"},
             {name: "Plan-AI",description: "AI-powered task management app that uses natural language processing to help users organize and prioritize their to-do lists effectively.", html_url: "https://github.com/Abhishek9885/Plan-AI", full_name: "Abhishek9885/Plan-AI", category: "Full Stack", demo: "https://plan-ai-tan.vercel.app/" },
             {name: "ResumeAI", description: "ResumeAI Analyzer is a full-stack web application that uses artificial intelligence to help users create and improve their resumes. It provides personalized feedback on resume content, formatting, and keywords to help users create professional and effective resumes.", html_url: "https://github.com/Abhishek9885/ResumeAI", full_name: "Abhishek9885/ResumeAI", category: "Full Stack", demo: "https://resumeai-sck8.onrender.com/"},
+            {name: "Digital-Wishlist-Platform", description: "Digital Wishlist Platform is a modern e-commerce application that allows users to create and share personalized product wishlists with friends and family. It features a seamless user experience with product discovery, wishlist management, and social sharing capabilities.", html_url: "https://github.com/Abhishek9885/Digital-Wishlist-Platform", full_name: "Abhishek9885/Digital-Wishlist-Platform", category: "Full Stack", demo: "https://digital-wishlist-platform.onrender.com/dashboard.html"}, 
 
           ]);
           return;
         }
    
         setProjects(
-          data.slice(0, 8).map(p => ({
+          data.slice(0, 12).map(p => ({
             ...p,
             category: "Full Stack",
             demo: DEMO_URLS[p.name] || null,
