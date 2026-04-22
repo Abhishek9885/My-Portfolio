@@ -142,17 +142,37 @@ function ContactSection() {
   const handleChange = (e) =>
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
     setStatus("sending");
-    const subject = encodeURIComponent(`Portfolio Contact from ${formData.name}`);
-    const body    = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`);
-    window.location.href = `mailto:singhabhishek4964@gmail.com?subject=${subject}&body=${body}`;
-    setTimeout(() => {
-      setStatus("sent");
-      setFormData({ name: "", email: "", message: "" });
-    }, 800);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/singhabhishek4964@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Portfolio Message from ${formData.name}`
+        })
+      });
+
+      if (response.ok) {
+        setStatus("sent");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("idle");
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("idle");
+      alert("Failed to send message. Please check your internet connection.");
+    }
   };
 
   const inputBase = {
@@ -215,7 +235,7 @@ function ContactSection() {
             </div>
             <motion.button type="submit" whileHover={{ scale:1.02 }} whileTap={{ scale:0.98 }} disabled={status === "sending"}
               style={{ width:"100%", padding:"14px", background: status === "sending" ? "rgba(56,189,248,0.3)" : "linear-gradient(90deg,#22d3ee,#3b82f6)", border:"none", borderRadius:12, color: status === "sending" ? "#a0bdd4" : "#000", fontWeight:600, fontSize:15, cursor: status === "sending" ? "not-allowed" : "pointer", letterSpacing:"0.5px", transition:"all 0.3s", boxShadow: status === "sending" ? "none" : "0 0 20px rgba(56,189,248,0.3)" }}>
-              {status === "sending" ? "Opening mail client..." : "Send Message →"}
+              {status === "sending" ? "Sending Message..." : "Send Message →"}
             </motion.button>
             <div style={{ display:"flex", justifyContent:"center", gap:24, paddingTop:4, flexWrap:"wrap" }}>
               {[
