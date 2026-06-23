@@ -9,6 +9,7 @@ import certi4 from "./assets/certi4.jpg";
 import certi5 from "./assets/certi5.jpg";
 import certi6 from "./assets/certi6.jpg";
 import certi7 from "./assets/certi7.jpg";
+import certi8 from "./assets/certi8.jpg";
 
 export const roles = ["Full Stack Developer", "CSE Student", "Tech Enthusiast"];
 
@@ -19,7 +20,8 @@ export const certificates = [
   { img: certi4, title: "Effective Communication" },
   { img: certi5, title: "C Programming" },
   { img: certi6, title: "Cyber Security" },
-  { img: certi7, title: "WEB-A-THON 2.0" }
+  { img: certi7, title: "WEB-A-THON 2.0" },
+  { img: certi8, title: "Java Certificate" }
 ];
 
 export const skills = [
