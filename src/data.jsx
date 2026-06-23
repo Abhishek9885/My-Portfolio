@@ -1,6 +1,6 @@
-import { FaHtml5, FaCss3Alt, FaDatabase, FaBrain } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaDatabase, FaBrain, FaShieldAlt } from "react-icons/fa";
 import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiMongodb, SiJavascript, SiCplusplus, SiMysql, SiExpress } from "react-icons/si";
+import { SiMongodb, SiJavascript, SiCplusplus, SiMysql, SiExpress, SiNextdotjs, SiTypescript, SiPrisma } from "react-icons/si";
 
 import certi1 from "./assets/certi1.jpg";
 import certi2 from "./assets/certi2.jpg";
@@ -29,6 +29,11 @@ export const skills = [
   { name: "CSS", icon: <FaCss3Alt />, glow: "#38bdf8", level: "Advanced", dots: 4, desc: "Crafted animations, responsive layouts using Flexbox & Grid." },
   { name: "JavaScript", icon: <SiJavascript />, glow: "#facc15", level: "Advanced", dots: 4, desc: "Built dynamic UIs, form validations & REST API integrations." },
   { name: "React.js", icon: <FaReact />, glow: "#61dafb", level: "Intermediate", dots: 3, desc: "Developed SPAs with hooks, component architecture & state management." },
+  { name: "Next.js", icon: <SiNextdotjs />, glow: "#ffffff", level: "Intermediate", dots: 3, desc: "Built fast, SEO-friendly applications with server rendering and routing." },
+  { name: "NextAuth", icon: <FaShieldAlt />, glow: "#94a3b8", level: "Intermediate", dots: 3, desc: "Implemented secure authentication flows and protected user sessions." },
+  { name: "TypeScript", icon: <SiTypescript />, glow: "#3178c6", level: "Intermediate", dots: 3, desc: "Added type safety to components, APIs, and shared application logic." },
+  { name: "Neon DB", icon: <FaDatabase />, glow: "#22c55e", level: "Intermediate", dots: 3, desc: "Used serverless PostgreSQL for scalable, cloud-native data storage." },
+  { name: "Prisma ORM", icon: <SiPrisma />, glow: "#2d3748", level: "Intermediate", dots: 3, desc: "Modeled databases with type-safe queries and schema-driven workflows." },
   { name: "Node.js", icon: <FaNodeJs />, glow: "#4ade80", level: "Intermediate", dots: 3, desc: "Built REST APIs and server-side logic for full-stack apps." },
   { name: "Express.js", icon: <SiExpress />, glow: "#c0c0c0", level: "Intermediate", dots: 3, desc: "Created routing, middleware & RESTful endpoints for backend services." },
   { name: "MongoDB", icon: <SiMongodb />, glow: "#4db561", level: "Intermediate", dots: 3, desc: "Designed NoSQL schemas & integrated Mongoose with Node.js." },
