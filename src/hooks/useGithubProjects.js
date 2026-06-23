@@ -11,6 +11,7 @@ const DEMO_URLS = {
   "Plan-AI": "https://plan-ai-tan.vercel.app/",
   "ResumeAI": "https://resumeai-sck8.onrender.com/",
   "Digital-Wishlist-Platform": "https://digital-wishlist-platform.onrender.com/dashboard.html",
+  "college-discovery": "https://college-discovery-taupe-xi.vercel.app/",
 };
 
 export function useGithubProjects(username) {
@@ -33,6 +34,7 @@ export function useGithubProjects(username) {
             { name: "Plan-AI", description: "AI-powered task management app that uses natural language processing to help users organize and prioritize their to-do lists effectively.", html_url: `https://github.com/${username}/Plan-AI`, full_name: `${username}/Plan-AI`, category: "Full Stack", demo: "https://plan-ai-tan.vercel.app/" },
             { name: "ResumeAI", description: "ResumeAI Analyzer is a full-stack web application that uses artificial intelligence to help users create and improve their resumes.", html_url: `https://github.com/${username}/ResumeAI`, full_name: `${username}/ResumeAI`, category: "Full Stack", demo: "https://resumeai-sck8.onrender.com/" },
             { name: "Digital-Wishlist-Platform", description: "Digital Wishlist Platform is a modern e-commerce application that allows users to create and share personalized product wishlists with friends and family.", html_url: `https://github.com/${username}/Digital-Wishlist-Platform`, full_name: `${username}/Digital-Wishlist-Platform`, category: "Full Stack", demo: "https://digital-wishlist-platform.onrender.com/dashboard.html" },
+            { name: "college-discovery", description:"CampusConnect is a full-stack college discovery platform that helps students explore, compare, and evaluate colleges through course insights, placement analytics, reviews, and rank-based recommendations. Built with Next.js, TypeScript, Prisma, PostgreSQL, and Tailwind CSS.", html_url: `https://github.com/${username}/college-discovery`, full_name: `${username}/college-discovery`, category: "Full Stack", demo: "https://college-discovery-taupe-xi.vercel.app/" },
           ]);
           return;
         }
