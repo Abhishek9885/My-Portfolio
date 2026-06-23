@@ -4,6 +4,7 @@ const DEMO_URLS = {
   "Todo-App-MERN": "https://todo-app-mern-liart.vercel.app/",
   "first-contributions": null,
   "ai-hygiene-system": null,
+  "college-discovery": "https://college-discovery-taupe-xi.vercel.app/",
   "cartiq-backend": "https://cartiq-backend.onrender.com/",
   "cartiq-frontend": "https://cartiq-frontend.vercel.app/",
   "My-Portfolio": "https://my-portfolio-abhishek-85.vercel.app/",
@@ -40,7 +41,7 @@ export function useGithubProjects(username) {
           data.slice(0, 12).map((p) => ({
             ...p,
             category: "Full Stack",
-            demo: DEMO_URLS[p.name] || null,
+            demo: (p.homepage && p.homepage.trim()) || DEMO_URLS[p.name] || null,
           }))
         );
       })
