@@ -21,7 +21,28 @@ export const certificates = [
   { img: certi5, title: "C Programming" },
   { img: certi6, title: "Cyber Security" },
   { img: certi7, title: "WEB-A-THON 2.0" },
-  { img: certi8, title: "Java Certificate" }
+  { img: certi8, title: "Java Certificate" },
+  {
+    img: "https://drive.google.com/thumbnail?id=1qw05CUVfesjBudpbTiA5SS0djwEyhrL1&sz=w1200",
+    previewUrl: "https://drive.google.com/file/d/1qw05CUVfesjBudpbTiA5SS0djwEyhrL1/preview",
+    title: "Hackathon Certificate"
+  }
+];
+
+export const achievements = [
+  {
+    platform: "LeetCode",
+    url: "https://leetcode.com/u/Abhishek_9415/",
+    title: "200+ DSA Problems Solved",
+    count: "200+",
+    description: "Strengthened problem-solving skills by practicing data structures and algorithms on LeetCode."
+  },
+  {
+    platform: "Hackathon",
+    title: "Top 10 Hackathon Rank",
+    count: "Top 10",
+    description: "Secured a top 10 rank among 100+ participating teams in a competitive hackathon."
+  }
 ];
 
 export const skills = [

@@ -8,13 +8,14 @@ import { About } from "./components/About";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Certificates } from "./components/Certificates";
+import { Achievements } from "./components/Achievements";
 import { ContactSection } from "./components/ContactSection";
 import { Footer } from "./components/Footer";
 import { CustomCursor } from "./components/CustomCursor";
 
 // Hooks & Data
 import { useGithubProjects } from "./hooks/useGithubProjects";
-import { roles, certificates, skills } from "./data";
+import { roles, certificates, achievements, skills } from "./data";
 
 export default function Portfolio() {
   const [dark, setDark] = useState(true);
@@ -49,7 +50,7 @@ export default function Portfolio() {
   // Scroll spy for Navbar
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "skills", "projects", "certificates", "contact"];
+      const sections = ["home", "about", "skills", "projects", "certificates", "achievements", "contact"];
       sections.forEach((id) => {
         const el = document.getElementById(id);
         if (el) {
@@ -76,6 +77,7 @@ export default function Portfolio() {
       <Skills skills={skills} />
       <Projects projects={projects} selectedProject={selectedProject} setSelectedProject={setSelectedProject} />
       <Certificates certificates={certificates} setSelectedCert={setSelectedCert} />
+      <Achievements achievements={achievements} />
       <ContactSection />
       
       <Footer />
@@ -92,7 +94,16 @@ export default function Portfolio() {
             className="max-w-4xl w-full relative"
           >
             <button className="absolute -top-10 right-0 text-white hover:text-cyan-400 text-xl font-bold">✕ Close</button>
-            <img src={selectedCert.img} className="rounded-2xl w-full shadow-2xl border border-white/10" alt={selectedCert.title} />
+            {selectedCert.previewUrl ? (
+              <iframe
+                src={selectedCert.previewUrl}
+                title={selectedCert.title}
+                className="rounded-2xl w-full h-[70vh] shadow-2xl border border-white/10 bg-slate-900"
+                allow="autoplay"
+              />
+            ) : (
+              <img src={selectedCert.img} className="rounded-2xl w-full shadow-2xl border border-white/10" alt={selectedCert.title} />
+            )}
             <p className="text-center mt-6 text-white text-xl font-medium tracking-wide">{selectedCert.title}</p>
           </motion.div>
         </div>

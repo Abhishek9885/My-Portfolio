@@ -7,7 +7,7 @@ export function Navbar({ active, dark, setDark }) {
         Abhishek<span className="text-cyan-400">.</span>
       </h1>
       <div className="hidden md:flex gap-8 text-sm font-medium">
-        {["home", "about", "skills", "projects", "certificates", "contact"].map((id) => (
+        {["home", "about", "skills", "projects", "certificates", "achievements", "contact"].map((id) => (
           <a 
             key={id} 
             href={`#${id}`} 
