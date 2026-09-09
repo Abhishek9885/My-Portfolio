@@ -33,7 +33,7 @@ export function Hero({ text }) {
           <a href="#about" className="px-8 py-3 border border-cyan-400/50 rounded-xl hover:bg-cyan-400/10 hover:border-cyan-400 transition-all duration-300">
             About Me
           </a>
-          <a href="/Abhi%20resume.pdf" download="Abhi_resume.pdf"
+          <a href="/ABhishk_Singh_General_CV.pdf" download="ABhishk_Singh_General_CV.pdf"
             className="px-8 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold rounded-xl hover:scale-105 shadow-lg hover:shadow-cyan-400/50 transition-all duration-300">
             Download Resume
           </a>
