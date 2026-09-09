@@ -14,7 +14,7 @@ export function About() {
       
       <h2 className="text-4xl font-display font-bold mb-8 text-white relative z-10">About Me</h2>
       <p className="text-gray-300/90 mb-10 text-lg leading-relaxed relative z-10">
-        I am a 2nd-year Computer Science and Engineering student at Lovely Professional University, passionate about coding, problem-solving, and building impactful projects. With strong skills in C, C++, and Data Structures & Algorithms, I actively practice competitive programming and explore real-world applications through projects in Web Development and Electronics.
+        I am a 3nd-year Computer Science and Engineering student at Lovely Professional University, passionate about coding, problem-solving, and building impactful projects. With strong skills in C, C++, and Data Structures & Algorithms, I actively practice competitive programming and explore real-world applications through projects in Web Development and Electronics.
         <br /><br />
         I believe in continuous learning and adaptability, which drives me to stay updated with emerging technologies in software engineering, AI, and system design. Beyond academics, I enjoy chess, which sharpens my strategic thinking and decision-making skills.
         <br /><br />
