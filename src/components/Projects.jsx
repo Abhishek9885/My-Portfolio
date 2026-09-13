@@ -42,11 +42,11 @@ export function Projects({ projects, selectedProject, setSelectedProject }) {
             initial={{ opacity: 0, y: 40 }} 
             whileInView={{ opacity: 1, y: 0 }} 
             transition={{ delay: i * 0.1 }} 
-            whileHover={{ y: -8, transition: { duration: 0.2 } }}
+            whileHover={{ y: -10, rotateX: 2, rotateY: -2, transition: { duration: 0.25 } }}
             onClick={() => setSelectedProject(p)}
-            className="group cursor-pointer bg-slate-900/60 backdrop-blur-xl p-5 rounded-2xl border border-white/5 shadow-xl hover:shadow-[0_10px_40px_rgba(34,211,238,0.15)] hover:border-cyan-400/30 transition-all duration-300 flex flex-col h-full"
+            className="group cursor-pointer bg-slate-900/60 backdrop-blur-xl p-5 rounded-2xl border border-white/5 shadow-xl hover:shadow-[0_18px_50px_rgba(34,211,238,0.18)] hover:border-cyan-400/30 transition-all duration-300 flex flex-col h-full [transform-style:preserve-3d]"
           >
-            <div className="relative overflow-hidden rounded-xl mb-5">
+            <div className="relative overflow-hidden rounded-xl mb-5 [transform:translateZ(18px)]">
               <img 
                 src={`https://opengraph.githubassets.com/1/${p.full_name}`} 
                 className="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500" 
@@ -55,8 +55,8 @@ export function Projects({ projects, selectedProject, setSelectedProject }) {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80" />
             </div>
             
-            <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{p.name}</h3>
-            <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3">{p.description || "View details on GitHub."}</p>
+            <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors [transform:translateZ(10px)]">{p.name}</h3>
+            <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3 [transform:translateZ(8px)]">{p.description || "View details on GitHub."}</p>
             
             <div className="flex items-center justify-between mt-auto">
               <span className="text-xs font-semibold bg-cyan-400/10 text-cyan-400 px-3 py-1.5 rounded-full border border-cyan-400/20">

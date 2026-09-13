@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export function About() {
   return (
@@ -26,7 +26,6 @@ export function About() {
           { icon: <FaGithub />, text: "GitHub", href: "https://github.com/Abhishek9885" },
           { icon: <FaLinkedin />, text: "LinkedIn", href: "https://leetcode.com/u/Abhishek_9415/" },
           { icon: <FaTwitter />, text: "X", href: "https://twitter.com/YOUR_TWITTER" },
-          { icon: <FaInstagram />, text: "Instagram", href: "https://www.instagram.com/its_abhishek_singh9885/" },
           { icon: <FaEnvelope />, text: "Email", href: "mailto:singhabhishek4964@gmail.com" }
         ].map((link, idx) => (
           <a key={idx} href={link.href} target="_blank" rel="noopener noreferrer" 

@@ -62,6 +62,22 @@
   }
 }
 
+@keyframes ambientGridDrift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(12px, -8px, 0) scale(1.02);
+  }
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.ambient-grid {
+  animation: ambientGridDrift 24s ease-in-out infinite;
+}
+
 #skills::before {
   content: '';
   position: absolute;

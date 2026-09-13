@@ -68,7 +68,7 @@ export default function Portfolio() {
       <CustomCursor />
       
       {/* Background Grids */}
-      <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:40px_40px] opacity-10 pointer-events-none" />
+      <div className="ambient-grid fixed inset-0 -z-10 bg-[linear-gradient(to_right,#0f172a_1px,transparent_1px),linear-gradient(to_bottom,#0f172a_1px,transparent_1px)] bg-[size:40px_40px] opacity-10 pointer-events-none" />
 
       <Navbar active={active} dark={dark} setDark={setDark} />
       

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -116,7 +116,6 @@ export function ContactSection() {
               {[
                 { href: "mailto:singhabhishek4964@gmail.com", icon: <FaEnvelope />, label: "singhabhishek4964@gmail.com" },
                 { href: "https://github.com/Abhishek9885", icon: <FaGithub />, label: "GitHub" },
-                { href: "https://www.instagram.com/its_abhishek_singh9885/", icon: <FaInstagram />, label: "Instagram" },
               ].map((l, i) => (
                 <a key={i} href={l.href} target={l.href.startsWith("mailto") ? undefined : "_blank"} rel="noopener noreferrer"
                   style={{ fontSize: 12, color: "#4a6580", display: "flex", alignItems: "center", gap: 6, textDecoration: "none", transition: "color 0.2s" }}

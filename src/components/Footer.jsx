@@ -1,4 +1,4 @@
-import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaEnvelope } from "react-icons/fa";
 
 export function Footer() {
   return (
@@ -8,9 +8,6 @@ export function Footer() {
       <div className="flex justify-center gap-6">
         <a href="https://github.com/Abhishek9885" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 hover:scale-110 transition-all duration-300">
           <FaGithub size={20} />
-        </a>
-        <a href="https://www.instagram.com/its_abhishek_singh9885/" target="_blank" rel="noopener noreferrer" className="hover:text-cyan-400 hover:scale-110 transition-all duration-300">
-          <FaInstagram size={20} />
         </a>
         <a href="mailto:singhabhishek4964@gmail.com" className="hover:text-cyan-400 hover:scale-110 transition-all duration-300">
           <FaEnvelope size={20} />
